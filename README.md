@@ -19,17 +19,26 @@ member 테이블을 생성하세요.
 
 mysql> describe member;
 +------------+------------------+------+-----+---------+----------------+
+
 | Field      | Type             | Null | Key | Default | Extra          |
-+------------+------------------+------+-----+---------+----------------+
-| id         | int(11) unsigned | NO   | PRI | NULL    | auto_increment |
-| user_id    | varchar(255)     | NO|     | NULL    |                |
-| email      | varchar(255)     | NO   |     | NULL    |                |
-| user_fname | varchar(255)     | NO   |     | NULL    |                |
-| user_lname | varchar(255)     | NO   |     | NULL    |                |
-| password   | varchar(25)      | NO   |     | NULL    |                |
-| user_auth  | varchar(10)      | YES  |     | NULL    |                |
+
 +------------+------------------+------+-----+---------+----------------+
 
+| id         | int(11) unsigned | NO   | PRI | NULL    | auto_increment |
+
+| user_id    | varchar(255)     | NO|     | NULL    |                |
+
+| email      | varchar(255)     | NO   |     | NULL    |                |
+
+| user_fname | varchar(255)     | NO   |     | NULL    |                |
+
+| user_lname | varchar(255)     | NO   |     | NULL    |                |
+
+| password   | varchar(25)      | NO   |     | NULL    |                |
+
+| user_auth  | varchar(10)      | YES  |     | NULL    |                |
+
++------------+------------------+------+-----+---------+----------------+
 
 최고 관리자 Data 입력 해 주셔야겠죠 ^^
 user_auth 에 "Admin" 이라고 입력 해주시면 됩니다. 
