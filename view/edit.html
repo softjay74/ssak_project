@@ -1,0 +1,58 @@
+<h2>SSAK InnerWeb Registration edit</h2>
+<br/>
+<!-- <form name="regForm"> -->
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>User ID</th>
+            <td>
+                <input name="userid"  ng-model="userdata.user_id" class="form-control"  required>
+            </td>
+        </tr>
+   <tr>
+    <th>First Name</th>
+        <td>
+            <input name="fName"  ng-model="userdata.user_fname" class="form-control"  required>
+        </td>
+    </tr>
+    <th>Last Name</th>
+    <td><input name="lName" ng-model="userdata.user_lname" class="form-control"  required >
+    </td>
+    </tr>
+    <tr>
+        <th>Email</th><td ><input  name="email" ng-model="userdata.email" class="form-control"  required>
+    </td>
+    </tr>
+<!--
+    <tr>
+        <th>Password</th><td><input ng-model="userdata.password"  type="password" class="form-control">
+    </td>
+    </tr>
+    <tr>
+        <th>Confirm Password </th><td><input name="confirmpassword" ng-model="userdata.confirm" type="password" class="form-control" required ng-compare="password">
+    </td>
+    </tr>
+ -->
+
+
+
+    <tr>
+    <th>Access Level</th><td colspan="3">
+        <select  ng-model="AuthCodes.value" ng-options = "v for v in AuthCodes.values"  class="selectpicker">
+            <option value="">----</option>
+           <!-- <option value="User">User</option>
+            <option value="Member">Committe Member</option>
+            <option value="Officer">Officer</option>
+            <option value="Admin">Administrator</option>
+            -->
+        </select>
+    </td>
+    </tr>
+    <tr>
+        <td colspan="4" align="center">
+            <button class="btn btn-danger" ng-click="userUpdate(userdata.id)" >Update</button>
+            <button class="btn btn-info"  ng-click="userCancel()">Cancel</button>
+        </td>
+
+        </tr>
+    </table>
+<!-- </form> -->

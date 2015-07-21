@@ -1,0 +1,69 @@
+<h2>SSAK InnerWeb Registration</h2>
+<br/>
+<div ng-controller="UserCtrl">
+<form name="regForm" ng-submit="addUser1()">
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>User ID</th>
+        <td>
+            <input name="userid"  ng-model="user.userid" class="form-control" duplicate="existingValues" required>
+            <span ng-show="regForm.userid.$dirty && regForm.userid.$error.required">Required Field</span>
+            <span ng-show="regForm.userid.$dirty && regForm.userid.$error.duplicate">Username does already exist!</span>
+
+        </td>
+    </tr>
+
+    <tr>
+    <th>First Name</th>
+        <td>
+            <input name="fName"  ng-model="user.fName" class="form-control" required>
+            <span ng-show="regForm.fName.$dirty && regForm.fName.$error.required">Required Field</span>
+        </td>
+    </tr>
+    <th>Last Name</th>
+    <td><input name="lName" ng-model="user.lName" class="form-control" required>
+        <span ng-show="regForm.lName.$dirty && regForm.lName.$error.required">Required Field</span>
+    </td>
+    </tr>
+    <tr>
+        <th>Email</th><td ><input type="email" name="email" ng-model="user.email" class="form-control" required>
+        <span ng-show="regForm.email.$dirty && regForm.email.$error.required">Required Field</span>
+        <span ng-show="regForm.email.$dirty && regForm.email.$error.email">Invaild email format</span>
+    </td>
+    </tr>
+    <tr>
+        <th>Password</th><td><input ng-model="user.password"  type="password" class="form-control" required>
+        <span ng-show="regForm.password.$dirty && regForm.password.$error.required">Required Field</span>
+    </td>
+    </tr>
+    <tr>
+        <th>Confirm Password </th>
+        <td>
+            <input ng-model="user.passwordConfirm" type="password" match="user.password" name="passwordConfirm" class="form-control" required/>
+            <span ng-show="regForm.passwordConfirm.$dirty && regForm.passwordConfirm.$error.required">Required Field</span>
+            <span ng-show="regForm.passwordConfirm.$dirty && regForm.passwordConfirm.$error.match">Fields do not match!</span>
+<!--
+         <input name="confirmpassword" ng-model="user.confirm" type="password" class="form-control" required   nx-equal-ex="login.password" name="verify">
+        <!-- <span ng-show="regForm.confirmpassword.$dirty">Required Field</span> -->
+        <!-- <input name="confirmpassword" ng-model="user.confirm" type="password" class="form-control" required  compare-to="user.password">
+        <span ng-show="regForm.confirmpassword.$dirty && regForm.confirmpassword.$error" ng-message-include="error show "></span>
+         -->
+
+
+    </td>
+    </tr>
+    <tr>
+           <td colspan="4" align="center">
+            Note: It may take up to 3 business days for account approval.
+      </td>
+    </tr>
+    <tr>
+        <td colspan="4" align="center">
+            <button class="btn btn-danger" ng-disabled="regForm.$invalid" ng-click="regUser()">Submit</button>
+            <button class="btn btn-info"  ng-click="userCancel()">Cancel</button>
+        </td>
+
+        </tr>
+    </table>
+</form>
+ </div>

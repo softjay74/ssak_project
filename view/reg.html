@@ -1,0 +1,32 @@
+<h2>SSAK InnerWeb Registration</h2>
+<br/>
+<div ng-controller="UserCtrl">
+<table class="table table-striped table-bordered">
+    <tr>
+    <th>First Name</th>
+        <td>
+            <input ng-model="Contact.fName" class="form-control" >
+        </td>
+    </tr>
+    <th>Last Name</th>
+    <td>
+        <input ng-model="Contact.lName" class="form-control">
+    </td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td ><input type="email"  ng-model="Contact.email" class="form-control" >
+    </td>
+    </tr>
+      <tr>
+       <td colspan="4" align="center">
+            Note: It may take up to 3 business days for account approval.
+    </td>
+    <tr>
+        <td colspan="4" align="center">
+            <button class="btn btn-info"  ng-click="addUser()">submit</button>
+        </td>
+
+        </tr>
+    </table>
+</div>

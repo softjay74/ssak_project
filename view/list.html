@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>User List</h1>
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Permission</th>
+            <th>Action</th>
+        </tr>
+        <!--
+       <tr >
+           <td><input clas="form-control" ng-model="Contact.email"></td>
+           <td><input clas="form-control" ng-model="Contact.fname"></td>
+           <td><input clas="form-control" ng-model="Contact.lname"></td>
+
+          <td>
+               <button ng-show= "btnAdd" class="btn btn-primary" ng-click="addContact()">Add Contact</button>
+               <button ng-show="btnUpdate" class="btn btn-primary" ng-click="updateContact(contact_id)">Update</button>
+           </td>
+
+        </tr>
+        -->
+        <tr ng-repeat="user in userlist">
+            <td>{{user.user_fname}}  {{user.user_lname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.user_auth}}</td>
+            <td>
+                <a href="#/ssak/edit/{{user.id}}">Edit</a>
+                <!-- <button class="btn btn-primary" ng-click="editUser(user.id)">Edit</button> -->
+                <button class="btn btn-danger"  ng-confirm-click="Do you want to delete  {{user.user_fname}} {{user.user_lname}} data?" ng-click="delUser(user.id)">Del</button>
+            </td>
+        </tr>
+    </table>
+    <br/>
+</div>
